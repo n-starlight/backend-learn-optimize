@@ -5,8 +5,8 @@ import datetime
  
 
 def gen_fake_user():
-    first_name=''.join(random.choices(string.ascii_uppercase,k=1)) +''.join(random.choices(string.ascii_uppercase,k=7))
-    last_name=''.join(random.choices(string.ascii_uppercase,k=1)) +''.join(random.choices(string.ascii_uppercase,k=7))
+    first_name=''.join(random.choices(string.ascii_uppercase,k=1)) +''.join(random.choices(string.ascii_lowercase,k=7))
+    last_name=''.join(random.choices(string.ascii_uppercase,k=1)) +''.join(random.choices(string.ascii_lowercase,k=7))
     name=f'{first_name}{last_name}'
     email=f'{last_name.lower()}@{first_name[:2]}{"".join(random.choices(string.digits, k=3))}'
     created_at=datetime.datetime.now()+datetime.timedelta(days=random.randint(-30,-15))
